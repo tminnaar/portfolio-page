@@ -1,5 +1,18 @@
+/* REF https://vanholtz.co/ */
+
+/* #727D71
+#FF9B42
+#FF4000
+#F4F3EE
+#13262F */
+
 * {
+	color: #13262f;
 	font-family: "Fira Sans", sans-serif;
+}
+
+body {
+	background-color: #f4f3ee;
 }
 
 .container {
@@ -14,17 +27,45 @@
 .info-panel {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
+	flex-wrap: wrap;
 	box-sizing: border-box;
 	padding-left: 150px;
 	width: 50%;
 }
 
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+
+	height: 160px;
+}
+
 .name {
 	font-size: 60px;
+	line-height: 50px;
+	margin: 0px;
 }
 
 .title {
+	/* color: #fc7a1e; */
+	color: #ff4000;
 	font-size: 40px;
+	margin: 0px;
+}
+
+.header button {
+	width: 50%;
+	height: 48px;
+	border: hidden;
+	background-color: #f4f3ee;
+
+	font-size: 20px;
+	text-align: left;
+
+	cursor: pointer;
 }
 
 .description {
@@ -45,8 +86,14 @@
 	flex-direction: column;
 	width: 50%;
 	padding-top: 150px;
+	margin: 0px;
+
+	/* background-color: #6d4c3d; */
+
 	overflow: scroll;
 	overflow-x: hidden;
+
+	visibility: hidden;
 }
 
 .nav-item {
