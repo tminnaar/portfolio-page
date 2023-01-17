@@ -1,13 +1,22 @@
+* {
+	font-family: "Fira Sans", sans-serif;
+}
+
 .container {
 	display: flex;
-	width: 80vw;
-	height: 100vh;
-	padding: 50px;
+	flex-direction: row;
+	/* width: 95vw; */
+	height: 95vh;
+	margin: 1px;
 	overflow: hidden;
 }
 
 .info-panel {
-	width: 60%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding-left: 150px;
+	width: 50%;
 }
 
 .name {
@@ -18,13 +27,46 @@
 	font-size: 40px;
 }
 
+.description {
+	width: 600px;
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.learnings {
+	width: 600px;
+	font-size: 18px;
+	line-height: 25px;
+}
+
 .nav-panel {
 	display: flex;
 	flex-direction: column;
-	width: 40%;
-	height: 85vh;
-	gap: 20px;
+	width: 50%;
+	padding-top: 150px;
 	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.nav-item {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	width: 800px;
+	margin: 1px;
+	cursor: pointer;
+}
+
+#nav-title {
+	width: 50%;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 25px;
+}
+
+#nav-title.right {
+	text-align: end;
 }
 
 .nav-panel img {
