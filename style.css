@@ -48,7 +48,6 @@ body {
 	line-height: 52px;
 	margin: 0px;
 	margin-bottom: 5px;
-	/* animation: 1s ease-out 0s 1 slideInFromLeft; */
 }
 
 .title {
@@ -56,7 +55,6 @@ body {
 	color: #ff4000;
 	font-size: 40px;
 	margin: 0px;
-	/* animation: 1s ease-out 0s 1 slideInFromLeft; */
 }
 
 .header button {
@@ -99,19 +97,15 @@ body {
 	line-height: 25px;
 }
 
-.nav-panel {
-	display: flex;
+#nav-panel {
+	display: none;
 	flex-direction: column;
 	width: 50%;
 	padding-top: 150px;
 	margin: 0px;
 
-	/* background-color: #6d4c3d; */
-
 	overflow: scroll;
 	overflow-x: hidden;
-
-	visibility: hidden;
 }
 
 .nav-item {
@@ -121,6 +115,10 @@ body {
 	width: 800px;
 	margin: 1px;
 	cursor: pointer;
+}
+
+.nav-item img {
+	width: 50%;
 }
 
 #nav-title {
@@ -158,5 +156,23 @@ body {
 
 	100% {
 		transform: translateY(-100);
+	}
+}
+
+@keyframes navSlideIn {
+	0% {
+		transform: translateY(300%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes navSlideOut {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(300%);
 	}
 }

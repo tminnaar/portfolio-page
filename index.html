@@ -11,6 +11,7 @@
 href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap"
 rel="stylesheet"
     />
+	<script src="navigation.js" defer></script>
     <style type="text/css">
     ::-webkit-scrollbar {
         width: 10px;
@@ -29,6 +30,7 @@ rel="stylesheet"
 <body>
     <div class="container">
     <div class="info-panel">
+        <div id="about-info" onload="hideSliderOnLoad()"></div>
         <div class="project-information">
         <!-- <h2 class="project-name">About Me</h2> -->
         <p class="description">
@@ -57,11 +59,11 @@ rel="stylesheet"
         <div class="header">
         <h1 class="name">travis</br>minnaar</h1>
 					<h1 class="title">web developer</h1>
-					<button id="about-btn">about ➔</button>
-					<button id="projects-btn">projects ➔</button>
+					<button id="about-button">about ➔</button>
+					<button id="projects-button">projects ➔</button>
         </div>
     </div>
-    <div class="nav-panel" display: none>
+    <div id="project-slider">
         <div class="nav-item" id="about-me">
         <p id="nav-title" class="left">About Me</p>
         <img src="project-images\portrait-gradient.png" alt="" />
@@ -90,7 +92,6 @@ rel="stylesheet"
         <p id="nav-title" class="left">Reflex Game</p>
         <img src="project-images\reflex-game.png" alt="" />
         </div>
-    </div>
     </div>
 </body>
 </html>
