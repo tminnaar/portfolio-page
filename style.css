@@ -2,7 +2,8 @@
 #FF9B42
 #FF4000
 #F4F3EE
-#13262F */
+#13262F 
+#312509*/
 
 * {
 	color: #13262f;
@@ -10,28 +11,65 @@
 }
 
 body {
+	height: 100vh;
+	width: 100vh;
 	background-color: #f4f3ee;
+	overflow: hidden;
 }
 
 .container {
 	display: flex;
 	flex-direction: row;
-	/* width: 95vw; */
+	width: 99vw;
 	height: 95vh;
 	margin: 1px;
 	overflow: hidden;
 }
 
-.info-panel {
+#info-panel {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	padding-left: 150px;
 	width: 50%;
 
-	animation: 2.2s ease-out 0s 1 slideInFromLeft;
+	animation: 2.2s ease-out 0s 1 headerSlideIn;
+}
+
+.color-fill {
+	background-color: #312509;
+}
+
+#about-panel {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width: 99vw;
+
+	box-sizing: border-box;
+	padding-right: 1600px;
+
+	z-index: -1;
+}
+
+#about-image {
+	display: flex;
+}
+
+#about-image img {
+	width: 500px;
+	padding: 50px 0px 50px 0px;
+}
+
+.about-text {
+	height: 250px;
+	padding-right: 200px;
+
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .header {
@@ -51,7 +89,6 @@ body {
 }
 
 .title {
-	/* color: #fc7a1e; */
 	color: #ff4000;
 	font-size: 40px;
 	margin: 0px;
@@ -75,6 +112,7 @@ body {
 	transform-origin: bottom left;
 
 	animation: 3s ease-out 0s 1 slideInFromBottom;
+	/* animation-delay: 2s; */
 }
 
 .header button:hover {
@@ -110,7 +148,7 @@ body {
 
 .nav-item {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	align-items: flex-end;
 	width: 800px;
 	margin: 1px;
@@ -128,7 +166,7 @@ body {
 	padding-left: 25px;
 }
 
-#nav-title.right {
+#nav-title.left {
 	text-align: end;
 }
 
@@ -136,12 +174,31 @@ body {
 	max-width: 400px;
 }
 
-@keyframes slideInFromLeft {
+@keyframes headerSlideIn {
 	0% {
-		transform: translateX(-60%);
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes aboutSlideIn {
+	0% {
+		transform: translateX(-100%);
 	}
 	100% {
-		transform: translateX(0);
+		transform: translateX(33%);
+	}
+}
+
+@keyframes aboutSlideOut {
+	0% {
+		transform: translateX(33%);
+	}
+	100% {
+		transform: translateX(6%);
 	}
 }
 
@@ -155,13 +212,13 @@ body {
 	}
 
 	100% {
-		transform: translateY(-100);
+		transform: translateY(0%);
 	}
 }
 
 @keyframes navSlideIn {
 	0% {
-		transform: translateY(300%);
+		transform: translateY(101%);
 	}
 	100% {
 		transform: translateY(0%);
@@ -173,6 +230,6 @@ body {
 		transform: translateY(0%);
 	}
 	100% {
-		transform: translateY(300%);
+		transform: translateY(150%);
 	}
 }

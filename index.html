@@ -1,97 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap"
-rel="stylesheet"
-    />
-	<script src="navigation.js" defer></script>
-    <style type="text/css">
-    ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #727D71;
-        border-radius: 6px;
-    }
-    ::-webkit-scrollbar-corner {
-        background: transparent;
-    }
-    </style>
-    <title>Portfolio</title>
-</head>
-<body>
-    <div class="container">
-    <div class="info-panel">
-        <div id="about-info" onload="hideSliderOnLoad()"></div>
-        <div class="project-information">
-        <!-- <h2 class="project-name">About Me</h2> -->
-        <p class="description">
-            <!-- Hi! I'm Travis, I'm 28 and have recently started my coding journey
-            in the last few months. I've grown up with computers from a very
-            young age but never thought to build a career off that familiarity
-            until a friend put together and ran a few creative JavaScript
-            activities over Discord earlier this year. Since then, I've been
-            hooked! I then dove straight into Code Academy to learn my html, CSS
-            and JavaScript basics over the summer and got cracking with my
-            projects! -->
-        </p>
-        <p class="learnings">
-            <!-- I started this journey to leave the trenches of retail and start a
-            lifelong career in Tech to better the lives of myself and my family.
-            I'm excited by the diversity in work and opportunity in the field
-            and feel like Web Dev is the perfect stepping stone into the
-            industry. I'm drawn the problem-solving nature of coding and the
-            creativity, both visually in design and within the nuts and bolts of
-            JavaScript. Most bootcamps require a full-time commitment and charge
-            a hefty fee. Being a father and the current sole-earner, Founders
-            and Coders allows me a to start my journey risk-free while
-            continuing to support my family in my current job. -->
-        </p>
-        </div>
-        <div class="header">
-        <h1 class="name">travis</br>minnaar</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet" />
+		<script src="navigation.js" defer></script>
+		<style type="text/css">
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #727d71;
+				border-radius: 6px;
+			}
+			::-webkit-scrollbar-corner {
+				background: transparent;
+			}
+		</style>
+		<title>Portfolio</title>
+	</head>
+	<body>
+		<div id="container" class="container">
+			<div id="about-panel" onload="hideSliderOnLoad()">
+				<div id="about-image">
+					<img src="project-images\portrait-gradient.png" alt="" />
+				</div>
+				<div id="about-info">
+					<div id="about-primary-text" class="about-text">
+						<p>
+							<strong
+								>Hi! I'm Travis, I'm 28 and have recently started my coding journey in the last few months. I've grown up with computers from a very young age but never thought to
+								build a career off that familiarity until a friend put together and ran a few creative JavaScript activities over Discord early last year. Since then, I've been
+								hooked! I then dove straight into Code Academy to learn my html, CSS and JavaScript basics over the summer and got cracking with my projects!</strong
+							><br />
+							<br />
+							I started this journey to leave the trenches of retail and begin a lifelong career as a developer. I'm excited by the diversity of work and multitudes of opportunity
+							in the field and feel like web development is the perfect stepping stone into the industry. I'm drawn the problem-solving nature of coding and the creativity, both
+							visually in design and within the nuts and bolts of JavaScript.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="info-panel">
+				<div class="project-information">
+					<h2 class="project-name"></h2>
+					<p class="description"></p>
+					<p class="learnings"></p>
+				</div>
+				<div class="header">
+					<h1 class="name">travis<br />minnaar</h1>
 					<h1 class="title">web developer</h1>
 					<button id="about-button">about ➔</button>
 					<button id="projects-button">projects ➔</button>
-        </div>
-    </div>
-    <div id="project-slider">
-        <div class="nav-item" id="about-me">
-        <p id="nav-title" class="left">About Me</p>
-        <img src="project-images\portrait-gradient.png" alt="" />
-        </div>
-        <div class="nav-item" id="project-gallery">
-        <img src="project-images\project-gallery.png" alt="" />
-        <p id="nav-title" class="right">Project Gallery</p>
-        </div>
-        <div class="nav-item" id="music-production">
-        <p id="nav-title" class="left">Music Production</p>
-        <img src="project-images\music-production.png" alt="" />
-        </div>
-        <div class="nav-item" id="comment-box">
-        <img src="project-images\comment box.png" alt="" />
-        <p id="nav-title" class="right">Comment Box</p>
-        </div>
-        <div class="nav-item" id="movie-data">
-        <p id="nav-title" class="left">Movie Data</p>
-        <img src="project-images\movie-data.png" alt="" />
-        </div>
-        <div class="nav-item" id="website">
-        <img src="project-images\website.png" alt="" />
-        <p id="nav-title" class="right">Website</p>
-        </div>
-        <div class="nav-item" id="feature">
-        <p id="nav-title" class="left">Reflex Game</p>
-        <img src="project-images\reflex-game.png" alt="" />
-        </div>
-    </div>
-</body>
+				</div>
+			</div>
+			<div id="project-slider">
+				<div class="nav-item" id="project-gallery">
+					<img src="project-images\project-gallery.png" alt="" />
+					<p id="nav-title" class="right">Project Gallery</p>
+				</div>
+				<div class="nav-item" id="music-production">
+					<p id="nav-title" class="left">Music Production</p>
+					<img src="project-images\music-production.png" alt="" />
+				</div>
+				<div class="nav-item" id="comment-box">
+					<img src="project-images\comment box.png" alt="" />
+					<p id="nav-title" class="right">Comment Box</p>
+				</div>
+				<div class="nav-item" id="movie-data">
+					<p id="nav-title" class="left">Movie Data</p>
+					<img src="project-images\movie-data.png" alt="" />
+				</div>
+				<div class="nav-item" id="website">
+					<img src="project-images\website.png" alt="" />
+					<p id="nav-title" class="right">Website</p>
+				</div>
+				<div class="nav-item" id="feature">
+					<p id="nav-title" class="left">Reflex Game</p>
+					<img src="project-images\reflex-game.png" alt="" />
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
