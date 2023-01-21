@@ -29,39 +29,52 @@ body {
 #info-panel {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-end;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	padding-left: 150px;
 	width: 50%;
-
-	animation: 2.2s ease-out 0s 1 headerSlideIn;
+	height: 1300px;
 }
 
-.color-fill {
-	background-color: #312509;
+#project-description {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80%;
+
+	overflow: hidden;
+	overflow-x: scroll;
 }
 
-#about-panel {
-	position: fixed;
+.project-panel {
+	display: none;
+	min-width: 100%;
+	min-height: 100%;
+
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.project-panel p {
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
-	width: 99vw;
-
-	box-sizing: border-box;
-	padding-right: 1600px;
-
-	z-index: -1;
+	padding-right: 30%;
+	width: 100%;
 }
 
 #about-image {
 	display: flex;
+	width: 380px;
+	height: 380px;
+	padding: 30px 0px 30px 0px;
 }
-
-#about-image img {
+.git-icon {
+	width: 50px;
+}
+#about-info {
 	width: 500px;
-	padding: 50px 0px 50px 0px;
 }
 
 .about-text {
@@ -77,11 +90,18 @@ body {
 	flex-direction: column;
 	justify-content: flex-end;
 	flex-wrap: wrap;
+	align-content: flex-start;
 
-	height: 160px;
+	max-height: 160px;
+	overflow: hidden;
+
+	animation: 2.2s ease-out 0s 1 headerSlideIn;
 }
 
+.name-title {
+}
 .name {
+	width: 606px;
 	font-size: 60px;
 	line-height: 52px;
 	margin: 0px;
@@ -89,6 +109,7 @@ body {
 }
 
 .title {
+	width: 606px;
 	color: #ff4000;
 	font-size: 40px;
 	margin: 0px;
@@ -115,12 +136,30 @@ body {
 	/* animation-delay: 2s; */
 }
 
-.header button:hover {
+.menu-buttons {
+	display: flex;
+	flex-direction: column;
+
+	/* transition: all 2s ease-in-out; */
+}
+
+#projects-button {
+	display: none;
+}
+
+.buttonSlideUp {
+	/* transition: all 2s ease-in-out;
+	transform: translateY(0px); */
+
+	animation: 3s ease-out 0s 1 slideInFromBottom;
+}
+
+/* .header button:hover {
 	-webkit-transform: scale(1.2);
 	-ms-transform: scale(1.2);
 	transform: scale(1.2);
 	transition: all 300ms ease-in;
-}
+} */
 
 .description {
 	width: 600px;
@@ -135,7 +174,7 @@ body {
 	line-height: 25px;
 }
 
-#nav-panel {
+#project-slider {
 	display: none;
 	flex-direction: column;
 	width: 50%;
@@ -189,16 +228,16 @@ body {
 		transform: translateX(-100%);
 	}
 	100% {
-		transform: translateX(33%);
+		transform: translateX(55%);
 	}
 }
 
 @keyframes aboutSlideOut {
 	0% {
-		transform: translateX(33%);
+		transform: translateX(55%);
 	}
 	100% {
-		transform: translateX(6%);
+		transform: translateX(0%);
 	}
 }
 
@@ -218,7 +257,7 @@ body {
 
 @keyframes navSlideIn {
 	0% {
-		transform: translateY(101%);
+		transform: translateY(100%);
 	}
 	100% {
 		transform: translateY(0%);
