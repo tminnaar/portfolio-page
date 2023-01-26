@@ -26,110 +26,20 @@
 	</head>
 	<body>
 		<div id="container" class="container">
-			<!-- <div id="about-panel" onload="hideSliderOnLoad()">
-				<div id="about-image"></div>
-			</div> -->
 			<div id="info-panel">
 				<div id="project-description">
-					<div class="project-panel" id="panel-about">
-						<h2 id="project-title">About Me</h2>
+					<div class="project-panel" id="panel-about" onload="displayOnLoad()">
 						<img src="project-images\portrait-gradient.png" alt="" id="about-image" />
 						<p>
 							<strong
-								>Hi! I'm Travis, I'm 28 and have recently started my coding journey in the last few months. I've grown up with computers from a very young age
-								but never thought to build a career off that familiarity until a friend put together and ran a few creative JavaScript activities over Discord
-								early last year. Since then, I've been hooked! I then dove straight into Code Academy to learn my html, CSS and JavaScript basics over the
-								summer and got cracking with my projects!
+								>Hi! I'm Travis, I'm 28 and have recently started my coding journey in the last few months. I started this journey to leave the trenches of
+								retail and begin a lifelong career as a developer. I'm excited by the diversity of work and multitudes of opportunity in the field and feel like
+								web development is the perfect stepping stone into the industry. I'm drawn the problem-solving nature of coding and the creativity, both
+								visually in design and within the nuts and bolts of JavaScript.
 							</strong>
-							<br />
-							<br />
-							I started this journey to leave the trenches of retail and begin a lifelong career as a developer. I'm excited by the diversity of work and
-							multitudes of opportunity in the field and feel like web development is the perfect stepping stone into the industry. I'm drawn the
-							problem-solving nature of coding and the creativity, both visually in design and within the nuts and bolts of JavaScript.
 						</p>
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
 						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
-					</div>
-					<div class="project-panel">
-						<h2 id="project-title">Project Gallery</h2>
-						<p>
-							A card interface gallery of all my projects. Included in each card is an image, a description and links to the relevant GitHub pages and
-							repository. The amount of cards per row is reduced depending on screen width and each card expands to reveal the description text.
-						</p>
-						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar/project-gallery" target="_blank">Repo ↗</a>
-						<a href="https://tminnaar.github.io/project-gallery/" target="_blank">Pages ↗</a>
-					</div>
-					<div class="project-panel">
-						<h2 id="project-title">Music Production</h2>
-						<p>
-							A webpage about music production! It lists some of the equipment I use and a bit of information regarding my workflow. I used flexbox for the
-							first time here and separated all the sections into columns. I've also added in embedded SoundCloud players.
-						</p>
-						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar/music-production" target="_blank">Repo ↗</a>
-						<a href="https://tminnaar.github.io/music-production/" target="_blank">Pages ↗</a>
-					</div>
-					<div class="project-panel">
-						<h2 id="project-title">Comment Box</h2>
-						<p>
-							A very simple comment box with 2 inputs for Name and Email Address as well as a text area input for the comment field with placeholders in each
-							field. The comment text area has a character limit of 140 that will turn red when exceeded, as well as a required attribute in all fields. On
-							submit, comments are displayed below and persist when a new comment is added.
-						</p>
-						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar/comment-box" target="_blank">Repo ↗</a>
-						<a href="https://tminnaar.github.io/comment-box/" target="_blank">Pages ↗</a>
-					</div>
-					<div class="project-panel">
-						<h2 id="project-title">Movie Data</h2>
-						<p>
-							A simple interface using JavaScript objects to display film posters in a slider with relevant information such as plot, cast, rating etc.
-							displayed on the left. The films are able to be sorted Alphabetically using a button above the slider as well as navigated through using arrows
-							either side. The user can add or edit their own review which is then stored within the key for each film and is persistent when navigating and
-							sorting.
-						</p>
-						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar/movie-data" target="_blank">Repo ↗</a>
-						<a href="https://tminnaar.github.io/movie-data/" target="_blank">Pages ↗</a>
-					</div>
-					<div class="project-panel">
-						<h2 id="project-title">Website</h2>
-						<p>
-							A single page portfolio with tab navigation and dynamic content. When navigating, classes are added and removed to display the relevant project
-							image, description and learnings. I went for a monochromatic color scheme, a sleek background image and animations on hover and on page load.
-						</p>
-						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar/application-website" target="_blank">Repo ↗</a>
-						<a href="https://tminnaar.github.io/application-website/" target="_blank">Pages ↗</a>
-					</div>
-					<div class="project-panel">
-						<div id="game-container">
-							<div id="game-area">
-								<div id="game-popup-box">
-									<h1 id="game-popup-text" onclick="startGame()">Start Game</h1>
-								</div>
-								<div id="game-target" onclick="targetClick()"></div>
-							</div>
-							<div id="score-display">
-								<h2>TIME REMAINING:</h2>
-								<p id="time-number"></p>
-								<h2>SCORE:</h2>
-								<p id="score-number"></p>
-								<h2>HIGH SCORE</h2>
-								<p id="high-score-number"></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header">
-					<div class="name-title">
-						<h1 class="name">travis<br />minnaar</h1>
-						<h1 class="title">web developer</h1>
-					</div>
-					<div class="menu-buttons">
-						<button id="about-button">about ➔</button>
-						<button id="projects-button">projects ➔</button>
 					</div>
 				</div>
 			</div>
@@ -158,6 +68,16 @@
 					<p id="nav-title" class="left">Reflex Game</p>
 					<img src="project-images\reflex-game.png" alt="" />
 				</div>
+			</div>
+			<div class="header">
+				<div class="name-title">
+					<h1 class="name">travis<br />minnaar</h1>
+					<h1 class="title">web developer</h1>
+				</div>
+				<!-- <div class="menu-buttons">
+                    <button id="about-button">about ➔</button>
+                    <button id="projects-button">projects ➔</button>
+                </div> -->
 			</div>
 		</div>
 	</body>
