@@ -23,3 +23,9 @@ const aboutImage = document.getElementById("about-image");
 // hideSliderOnLoad();
 // toggleElements();
 // displayOnLoad();
+
+function aboutFadeIn() {
+	aboutPanel.classList.add("about-fade-in");
+}
+
+aboutFadeIn();
