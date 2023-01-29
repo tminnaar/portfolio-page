@@ -5,24 +5,19 @@ const projectSlider = document.getElementById("project-slider");
 const aboutPanel = document.getElementById("panel-about");
 const aboutImage = document.getElementById("about-image");
 
-// function toggleElements() {
-// 	aboutButton.addEventListener("click", function () {
-// 		projectsButton.style.display = "flex";
-// 	});
-// }
+function toggleElements() {
+	aboutButton.addEventListener("click", function () {
+		aboutPanel.style.display = "flex";
+		projectSlider.style.display = "none";
+	});
+	projectsButton.addEventListener("click", function () {
+		infoPanel.style.animation = "aboutSlideOut 2s forwards";
+		projectSlider.style.display = "flex";
+		projectSlider.style.animation = "navSlideIn 2s forwards";
+	});
+}
 
-// function hideSliderOnLoad() {
-// 	projectSlider.style.display = "none";
-// 	aboutPanel.style.display = "none";
-// }
-
-// function displayOnLoad() {
-// 	aboutPanel.style.display = "flex";
-// }
-
-// hideSliderOnLoad();
-// toggleElements();
-// displayOnLoad();
+toggleElements();
 
 function aboutFadeIn() {
 	aboutPanel.classList.add("about-fade-in");

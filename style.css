@@ -38,6 +38,11 @@ body {
 	box-sizing: border-box;
 	width: 50%;
 	height: 80%;
+
+	position: relative;
+	left: 25%;
+
+	/* padding-left: 33%; */
 }
 
 #project-description {
@@ -46,15 +51,14 @@ body {
 	align-items: center;
 
 	width: 100%;
-	height: 100%;
-
+	/* 
 	overflow: hidden;
-	overflow-x: scroll;
+	overflow-x: scroll; */
 }
 
 .project-panel {
-	display: flex;
-	flex-direction: column;
+	/* display: flex;
+	flex-direction: column; */
 	min-width: 100%;
 	min-height: 10%;
 }
@@ -68,17 +72,40 @@ body {
 }
 
 .about-fade-in {
-	animation: 2.2s ease-out aboutFadeIn;
+	animation: 0.5s ease-out aboutFadeIn;
 }
 
 #panel-about {
+	display: none;
+	flex-direction: row;
 }
 
 #about-image {
-	width: 40%;
+	width: 42%;
+	height: 42%;
 }
+
+#about-text-git-img {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	align-content: space-between;
+
+	box-sizing: border-box;
+	padding: 0 5% 0 2%;
+}
+
+#about-text-git-img p {
+	font-size: 1.1em;
+	margin: 0px;
+
+	padding-right: 8%;
+}
+
 .git-icon {
-	width: 30px;
+	width: 8%;
+	padding-right: 3%;
 }
 #about-info {
 	width: 500px;
@@ -96,7 +123,7 @@ body {
 	flex-wrap: wrap;
 	align-content: flex-start;
 
-	width: 100%;
+	min-width: 100%;
 	height: 20%;
 	overflow: hidden;
 
@@ -104,6 +131,7 @@ body {
 }
 
 .name-title {
+	width: 24.5%;
 }
 .name {
 	width: 606px;
@@ -120,7 +148,7 @@ body {
 	margin: 0px;
 }
 
-/* .header button {
+.header button {
 	display: flex;
 	align-items: flex-end;
 	width: 120px;
@@ -138,29 +166,28 @@ body {
 	transform-origin: bottom left;
 
 	animation: 3s ease-out 0s 1 slideInFromBottom;
-	animation-delay: 2s;
-} */
+}
 
-/* .menu-buttons {
+.menu-buttons {
 	display: flex;
 	flex-direction: column;
 
 	transition: all 2s ease-in-out;
-} */
-
-.buttonSlideUp {
-	/* transition: all 2s ease-in-out;
-	transform: translateY(0px); */
-
-	animation: 3s ease-out 0s 1 slideInFromBottom;
 }
 
-/* .header button:hover {
+.buttonSlideUp {
+	transition: all 2s ease-in-out;
+	transform: translateY(0px);
+	/* 
+	animation: 2s ease-out 0s 1 slideInFromBottom; */
+}
+
+.header button:hover {
 	-webkit-transform: scale(1.2);
 	-ms-transform: scale(1.2);
 	transform: scale(1.2);
 	transition: all 300ms ease-in;
-} */
+}
 
 .description {
 	width: 600px;
@@ -223,21 +250,12 @@ body {
 	}
 }
 
-@keyframes aboutSlideIn {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(60%);
-	}
-}
-
 @keyframes aboutSlideOut {
 	0% {
-		transform: translateX(60%);
+		left: 25%;
 	}
 	100% {
-		transform: translateX(0%);
+		left: 0%;
 	}
 }
 
@@ -275,10 +293,6 @@ body {
 
 @keyframes aboutFadeIn {
 	0% {
-		opacity: 0;
-		transform: translateY(3%);
-	}
-	85% {
 		opacity: 0;
 		transform: translateY(3%);
 	}
