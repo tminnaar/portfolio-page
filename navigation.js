@@ -1,26 +1,42 @@
 const aboutButton = document.getElementById("about-button");
 const projectsButton = document.getElementById("projects-button");
-const infoPanel = document.getElementById("info-panel");
+
+const projectPanels = document.getElementById("project-panels");
 const projectSlider = document.getElementById("project-slider");
 const aboutPanel = document.getElementById("panel-about");
-const aboutImage = document.getElementById("about-image");
+const projectGalleryPanel = document.getElementById("panel-project-gallery");
+const musicProductionPanel = document.getElementById("panel-music-production");
+const commentBoxPanel = document.getElementById("panel-comment-box");
+const movieDataPanel = document.getElementById("panel-movie-data");
+const portfolioPagePanel = document.getElementById("panel-portfolio-page");
+const reflexGamePanel = document.getElementById("panel-reflex-game");
 
-function toggleElements() {
-	aboutButton.addEventListener("click", function () {
-		aboutPanel.style.display = "flex";
-		projectSlider.style.display = "none";
+const navProjectGallery = document.getElementById("nav-project-gallery");
+const navMusicProduction = document.getElementById("nav-music-production");
+const navCommentBox = document.getElementById("nav-comment-box");
+const navMovieData = document.getElementById("nav-movie-data");
+const navPortfolioPage = document.getElementById("nav-portfolio-page");
+const navReflexGame = document.getElementById("nav-reflex-game");
+
+aboutButton.addEventListener("click", function () {
+	aboutPanel.style.display = "flex";
+});
+projectsButton.addEventListener("click", function () {
+	projectPanels.style.animation = "aboutSlideOut 2s forwards";
+	projectSlider.style.display = "flex";
+	projectSlider.style.animation = "navSlideIn 2s forwards";
+});
+
+navProjectGallery.addEventListener("click", () => panelToggle(projectGalleryPanel));
+navMusicProduction.addEventListener("click", () => panelToggle(musicProductionPanel));
+navCommentBox.addEventListener("click", () => panelToggle(commentBoxPanel));
+navMovieData.addEventListener("click", () => panelToggle(movieDataPanel));
+navPortfolioPage.addEventListener("click", () => panelToggle(portfolioPagePanel));
+navReflexGame.addEventListener("click", () => panelToggle(reflexGamePanel));
+
+function panelToggle(panelToShow) {
+	Array.from(document.getElementsByClassName("panel")).forEach((panel) => {
+		panel.style.display = "none";
 	});
-	projectsButton.addEventListener("click", function () {
-		infoPanel.style.animation = "aboutSlideOut 2s forwards";
-		projectSlider.style.display = "flex";
-		projectSlider.style.animation = "navSlideIn 2s forwards";
-	});
+	panelToShow.style.display = "flex";
 }
-
-toggleElements();
-
-function aboutFadeIn() {
-	aboutPanel.classList.add("about-fade-in");
-}
-
-aboutFadeIn();
