@@ -42,7 +42,7 @@
 						</p>
 						<br />
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
+						<a href="https://github.com/tminnaar" target="_blank">Github ↗</a>
 					</div>
 				</div>
 				<div id="panel-project-gallery" class="panel" onLoad="aboutFadeIn()">
@@ -59,7 +59,8 @@
 						</p>
 						<br />
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
+						<a href="https://github.com/tminnaar/project-gallery" target="_blank">Repo ↗</a>
+						<a class="pages-link" href="https://tminnaar.github.io/project-gallery/" target="_blank">Pages ↗</a>
 					</div>
 				</div>
 				<div id="panel-music-production" class="panel" onLoad="aboutFadeIn()">
@@ -77,7 +78,8 @@
 						</p>
 						<br />
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
+						<a href="https://github.com/tminnaar/music-production" target="_blank">Repo ↗</a>
+						<a class="pages-link" href="https://tminnaar.github.io/music-production/" target="_blank">Pages ↗</a>
 					</div>
 				</div>
 				<div id="panel-comment-box" class="panel" onLoad="aboutFadeIn()">
@@ -96,7 +98,8 @@
 						</p>
 						<br />
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
+						<a href="https://github.com/tminnaar/comment-box" target="_blank">Repo ↗</a>
+						<a class="pages-link" href="https://tminnaar.github.io/comment-box/" target="_blank">Pages ↗</a>
 					</div>
 				</div>
 				<div id="panel-movie-data" class="panel" onLoad="aboutFadeIn()">
@@ -104,21 +107,40 @@
 					<div class="panel-description">
 						<p>
 							<strong
-								>A simple interface using JavaScript objects to display film posters in a slider with relevant information such as plot, cast, rating etc.
-								displayed on the left. The films are able to be sorted Alphabetically using a button above the slider as well as navigated through using arrows
-								either side. The user can add or edit their own review which is then stored within the key for each film and is persistent when navigating and
-								sorting.
+								>A simple interface using JavaScript objects to display film posters in a slider with information panels on the left. The films can be sorted
+								Alphabetically using a button above the slider and navigated through using directional arrows. Reviews can be added and edited and are stored
+								within the key for each film and are persistent when navigating and sorting.
 							</strong>
 							<br />
-							Objects! Using Object.keys.sort I mutated the movie data object to return an array of the keys to establish an index, which could then be used to
-							sort alphabetically and navigate between cards. This allowed me to manipulate text and image elements when navigating or sorting. Learning about
-							.setAttribute allowed me to push image source links from object property values into the element as well as alter the background-colour in the
-							body. dataset.mode allowed me to create 2 different states for editing or displaying the reviews and window.confirm helped solved the unexpected
-							issue reviews being saved when navigating or sorting in edit mode.
+							Using Object.keys.sort I mutated the movie data object to return an array of the keys to establish an index from which to sort and navigate. This
+							enabled me to manipulate content when navigating or sorting. .setAttribute enabled me to push image source links from object property values into
+							the element and alter the background-colour in the body. dataset.mode enabled me to create seperate states for editing or displaying the reviews,
+							window.confirm helped solved the unexpected issue of reviews being saved when navigating or sorting in edit mode.
 						</p>
 						<br />
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
+						<a href="https://github.com/tminnaar/movie-data" target="_blank">Repo ↗</a>
+						<a class="pages-link" href="https://tminnaar.github.io/movie-data/" target="_blank">Pages ↗</a>
+					</div>
+				</div>
+				<div id="panel-portfolio-page" class="panel" onLoad="aboutFadeIn()">
+					<img src="project-images\website.png" alt="" class="project-image" />
+					<div class="panel-description">
+						<p>
+							<strong
+								>A single page portfolio with tab navigation and dynamic content. When navigating, panels are displayed on the left containing information for
+								each project. This is my second attempt at a portfolio page, this time around I aimed to make the page more dynamic by repositioning elements
+								and by utilising a variety of animations.
+							</strong>
+							<br />
+							I used keyframe animations to animate the header and buttons sliding in at the bottom, the navigation panel sliding up and quick vertical fade-ins
+							for the panels. For the navigation I added an event listener on each tab that parsed in the relevant panel. It then called a function on it using
+							Array.from and .forEach that set the display of all panels to "none" and the relevent one to "flex". <br />
+						</p>
+						<br />
+						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
+						<a href="https://github.com/tminnaar/portfolio-page" target="_blank">Repo ↗</a>
+						<a class="pages-link" href="https://tminnaar.github.io/portfolio-page/" target="_blank">Pages ↗</a>
 					</div>
 				</div>
 				<div id="panel-reflex-game" class="panel" onLoad="aboutFadeIn()">
@@ -132,59 +154,32 @@
 								removes the target and allows the user to start again.
 							</strong>
 							<br />
-							<!-- I'm excited by the diversity of work and multitudes of opportunity in the field and feel like web development is the perfect stepping stone into
-							the industry. I'm drawn the problem-solving nature of coding and the creativity, both visually in design and within the nuts and bolts of
-							JavaScript. -->
 						</p>
 						<br />
 						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
-					</div>
-				</div>
-				<div id="panel-portfolio-page" class="panel" onLoad="aboutFadeIn()">
-					<img src="project-images\website.png" alt="" class="project-image" />
-					<div class="panel-description">
-						<p>
-							<strong
-								>A single page portfolio with tab navigation and dynamic content. When navigating, classes are added and removed to display the relevant project
-								image, description and learnings. I went for a monochromatic color scheme, a sleek background image and animations on hover and on page load.
-							</strong>
-							<br />
-							I used pseudo classes more frequently here in order to achieve fill and underline animations on the tabs and keyframe animations to animate the
-							header underline on page load. Within my navigation function I used Array.from to index all the tabs to iterate through and add or remove classes
-							to toggle the display state. <br />
-							I managed to include my Reflex Game within the website with some minor CSS changes to account for clashes in sizings and header stylings.
-						</p>
-						<br />
-						<img src="project-images\GitHub-Mark\PNG\GitHub-Mark-120px-plus.png" alt="" target="" class="git-icon" />
-						<a href="https://github.com/tminnaar" target="_blank">github ↗</a>
+						<a href="https://github.com/tminnaar/reflex-game" target="_blank">Repo ↗</a>
+						<a class="pages-link" href="https://tminnaar.github.io/reflex-game/" target="_blank">Pages ↗</a>
 					</div>
 				</div>
 			</div>
 			<div id="project-slider">
 				<div class="nav-item" id="nav-project-gallery">
-					<img src="project-images\project-gallery.png" alt="" />
-					<p id="nav-title" class="right">Project Gallery</p>
+					<p class="nav-title">Project Gallery</p>
 				</div>
 				<div class="nav-item" id="nav-music-production">
-					<p id="nav-title" class="left">Music Production</p>
-					<img src="project-images\music-production.png" alt="" />
+					<p class="left nav-title">Music Production</p>
 				</div>
 				<div class="nav-item" id="nav-comment-box">
-					<img src="project-images\comment box.png" alt="" />
-					<p id="nav-title" class="right">Comment Box</p>
+					<p class="nav-title">Comment Box</p>
 				</div>
 				<div class="nav-item" id="nav-movie-data">
-					<p id="nav-title" class="left">Movie Data</p>
-					<img src="project-images\movie-data.png" alt="" />
+					<p class="left nav-title">Movie Data</p>
 				</div>
 				<div class="nav-item" id="nav-portfolio-page">
-					<img src="project-images\website.png" alt="" />
-					<p id="nav-title" class="right">Portfolio Page</p>
+					<p class="nav-title">Portfolio Page</p>
 				</div>
 				<div class="nav-item" id="nav-reflex-game">
-					<p id="nav-title" class="left">Reflex Game</p>
-					<img src="project-images\reflex-game.png" alt="" />
+					<p class="left nav-title">Reflex Game</p>
 				</div>
 			</div>
 			<div class="header">

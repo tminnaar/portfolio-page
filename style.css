@@ -46,12 +46,14 @@ body {
 .panel {
 	display: none;
 	flex-direction: row;
+	padding-top: 22px;
 
 	animation: 0.5s ease-out aboutFadeIn;
 }
 
 .project-image {
-	width: 42%;
+	width: 21em;
+	height: 21em;
 }
 
 .panel-description {
@@ -65,6 +67,19 @@ body {
 	padding: 0 5% 0 2%;
 }
 
+.panel-description p {
+	margin-top: 0px;
+}
+
+.panel-description a:hover {
+	color: #ff4000;
+	animation: 0.5s ease-out hoverJump forwards;
+}
+
+.pages-link {
+	padding-left: 1em;
+}
+
 #about-text-git-img p {
 	font-size: 1.1em;
 	margin: 0px;
@@ -73,7 +88,7 @@ body {
 }
 
 .git-icon {
-	width: 8%;
+	width: 12%;
 	padding-right: 3%;
 }
 
@@ -97,7 +112,7 @@ body {
 .name {
 	width: 606px;
 	font-size: 3.7rem;
-	line-height: 52px;
+	line-height: 50px;
 	margin: 0px;
 	margin-bottom: 5px;
 }
@@ -146,6 +161,7 @@ body {
 	-ms-transform: scale(1.2);
 	transform: scale(1.2);
 	transition: all 300ms ease-in;
+	color: #ff4000;
 }
 
 #project-slider {
@@ -155,16 +171,19 @@ body {
 	height: 80%;
 	margin: 0px;
 
-	overflow: scroll;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 .nav-item {
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: flex-end;
+	justify-content: center;
+
 	width: 85%;
+	height: 180px;
 	margin: 1px;
+
 	cursor: pointer;
 }
 
@@ -174,14 +193,18 @@ body {
 	border: 3px solid black;
 }
 
-#nav-title {
-	width: 50%;
-	font-size: 20px;
+.nav-title {
+	margin: 0px;
+	width: 80%;
+	font-size: 6em;
 	font-weight: bold;
+	letter-spacing: -0.06em;
+	white-space: nowrap;
 }
 
-#nav-title.left {
-	text-align: end;
+.nav-title:hover {
+	color: #ff4000;
+	animation: 0.5s ease-out hoverJump forwards;
 }
 
 .nav-panel img {
@@ -238,5 +261,14 @@ body {
 	100% {
 		opacity: 1;
 		transform: translateY(0%);
+	}
+}
+
+@keyframes hoverJump {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(-5%);
 	}
 }
