@@ -23,10 +23,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 90%;
+	width: 95%;
 	height: 90%;
 	margin: 1px;
-	padding: 5% 10% 5% 10%;
+	padding: 5% 5% 5% 3%;
 
 	overflow: hidden;
 }
@@ -46,14 +46,14 @@ body {
 .panel {
 	display: none;
 	flex-direction: row;
-	padding-top: 22px;
+	padding-top: 35px;
 
 	animation: 0.5s ease-out aboutFadeIn;
 }
 
 .project-image {
-	width: 21em;
-	height: 21em;
+	width: 25em;
+	height: 25em;
 }
 
 .panel-description {
@@ -65,6 +65,8 @@ body {
 
 	box-sizing: border-box;
 	padding: 0 5% 0 2%;
+
+	font-size: 0.92em;
 }
 
 .panel-description p {
@@ -81,7 +83,7 @@ body {
 }
 
 #about-text-git-img p {
-	font-size: 1.1em;
+	font-size: 1.5em;
 	margin: 0px;
 
 	padding-right: 8%;
@@ -133,7 +135,7 @@ body {
 	background-color: transparent;
 
 	line-height: 36px;
-	font-size: 20px;
+	font-size: 1.2em;
 	text-align: left;
 
 	cursor: pointer;
@@ -171,7 +173,7 @@ body {
 	height: 80%;
 	margin: 0px;
 
-	/* overflow-x: hidden; */
+	overflow-x: visible;
 }
 
 .nav-item {
@@ -181,7 +183,7 @@ body {
 	justify-content: center;
 
 	width: 85%;
-	height: 180px;
+	height: 110px;
 	margin: 1px;
 
 	cursor: pointer;
@@ -195,10 +197,11 @@ body {
 
 .nav-title {
 	margin: 0px;
-	width: 80%;
-	font-size: 6em;
+	width: 100%;
+	height: 100%;
+	font-size: 8em;
 	font-weight: bold;
-	letter-spacing: -0.06em;
+	letter-spacing: -0.08em;
 	white-space: nowrap;
 }
 
@@ -246,9 +249,11 @@ body {
 
 @keyframes navSlideIn {
 	0% {
+		opacity: 0;
 		transform: translateY(100%);
 	}
 	100% {
+		opacity: 1;
 		transform: translateY(0%);
 	}
 }
