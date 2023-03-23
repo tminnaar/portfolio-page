@@ -1,4 +1,4 @@
-# portfolio-page
+# Portfolio Page
 
 A single page portfolio with tab navigation and dynamic content. When navigating, panels are displayed on the left containing information for and by utilising a variety of animations.
 
